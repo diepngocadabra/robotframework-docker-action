@@ -1,7 +1,7 @@
 # Create reports folder
 REPORTS_DIR=$(pwd)/$ROBOT_REPORTS_DIR
 TESTS_DIR=$(pwd)/$ROBOT_TESTS_DIR
-sudo mkdir $REPORTS_DIR && sudo chmod 777 $REPORTS_DIR
+sudo mkdir -p $REPORTS_DIR && sudo chmod 777 $REPORTS_DIR
 
 docker run --shm-size=$ALLOWED_SHARED_MEMORY \
   -e BROWSER=$BROWSER \
